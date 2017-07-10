@@ -46,4 +46,9 @@ public class MahasiswaController {
 		return "formMahasiswa";
 	}
 	
+	@RequestMapping(value="/mahasiswa/delete/{id}")
+	public String deleteData(@PathVariable Integer id){
+		mahasiswaService.deleteMahasiswa(id);
+		return "redirect:/mahasiswa";
+	}
 }

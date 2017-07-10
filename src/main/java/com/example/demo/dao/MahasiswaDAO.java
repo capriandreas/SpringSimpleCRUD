@@ -46,4 +46,12 @@ public class MahasiswaDAO implements MahasiswaService{
 		
 	}
 
+	@Override
+	public void deleteMahasiswa(Integer id) {
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		em.remove(em.find(Mahasiswa.class, id));
+		em.getTransaction().commit();
+	}
+
 }
