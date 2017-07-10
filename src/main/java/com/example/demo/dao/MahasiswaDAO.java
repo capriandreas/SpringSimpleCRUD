@@ -39,4 +39,11 @@ public class MahasiswaDAO implements MahasiswaService{
 		return saved;
 	}
 
+	@Override
+	public Mahasiswa getIdMahasiswa(Integer id) {
+		EntityManager em = emf.createEntityManager();
+		return em.find(Mahasiswa.class, id);
+		
+	}
+
 }

@@ -11,6 +11,7 @@ public interface MahasiswaService {
 	
 	Mahasiswa updateOrSave(Mahasiswa mahasiswa);
 	
+	Mahasiswa getIdMahasiswa(Integer id);
 }
 
 

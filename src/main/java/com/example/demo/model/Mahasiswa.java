@@ -17,6 +17,11 @@ public class Mahasiswa {
 	
 	private String nim;
 
+	
+	@Version
+	@Column(name="optVersion", columnDefinition="integer DEFAULT 0")
+	private int version;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -48,5 +53,15 @@ public class Mahasiswa {
 	public void setNim(String nim) {
 		this.nim = nim;
 	}
+
+	public int getVersion() {
+		return version;
+	}
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
+	
+	
 	
 }
